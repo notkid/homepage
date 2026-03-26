@@ -347,6 +347,114 @@
             font-weight: bold;
         }
         
+        /* FAQ */
+        #faq {
+            background: #fff;
+        }
+
+        .faq-categories {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-cat-btn {
+            padding: 8px 22px;
+            border: 2px solid #1e3a5f;
+            background: white;
+            color: #1e3a5f;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .faq-cat-btn.active,
+        .faq-cat-btn:hover {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .faq-group {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .faq-group-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            border-left: 4px solid #e74c3c;
+            padding-left: 12px;
+            margin: 35px 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: #f8f9fa;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question.open {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .faq-chevron {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .faq-question.open .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 18px 24px;
+            color: #555;
+            line-height: 1.75;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        .faq-answer.open {
+            display: block;
+        }
+
         /* Footer */
         footer {
             background: #1e3a5f;
@@ -398,6 +506,7 @@
             <li><a href="#specs">Specifications</a></li>
             <li><a href="#capacity">Capacity</a></li>
             <li><a href="#applications">Applications</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -714,6 +823,160 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p style="text-align:center; color:#666; margin-bottom: 30px;">Everything you need to know about our softgel encapsulation solutions</p>
+
+            <div class="faq-group">
+
+                <!-- I. Process & Environment -->
+                <div class="faq-group-title">I. Process &amp; Environment</div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q1: How does the equipment handle high humidity (&gt;60%) in Southeast Asia?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Our machines are designed for tropical climates. While standard cleanroom HVAC is usually sufficient, we offer specialized dehumidifying tumble dryers for large-scale production to ensure capsules remain non-sticky and stable.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q2: What is the filling accuracy for high-viscosity liquids?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        By using ultra-hard, high-precision components in our injection pumps, we consistently maintain a filling accuracy within <strong>±1%</strong> for both oils and complex suspensions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q3: Does the machine support "Washing-Free" technology?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. Our advanced micro-lubrication system allows for the production of washing-free capsules, eliminating the need for costly solvent cleaning and drying.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q4: How do you prevent bubbles in the gelatin during transport?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        With proper ambient temperature control and our optimized gelatin service tanks, we ensure a smooth, bubble-free flow even in hot and humid environments.
+                    </div>
+                </div>
+
+                <!-- II. Hardware & Durability -->
+                <div class="faq-group-title">II. Hardware &amp; Durability</div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q5: What materials are used for product-contact parts?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        All parts in contact with medicine or gelatin are made of <strong>SS316L</strong>. Other structural components use <strong>SS304</strong> to ensure full GMP compliance and corrosion resistance.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q6: What is the expected lifespan of the die rolls?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        With standard maintenance, our high-quality die rolls have an operational lifespan of <strong>over 12 months</strong> under normal production loads.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q7: Can the machine support 24/7 continuous operation?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Absolutely. Our equipment features an automated lubrication system that prevents spindle overheating, ensuring stability during round-the-clock high-intensity production.
+                    </div>
+                </div>
+
+                <!-- III. Software & Maintenance -->
+                <div class="faq-group-title">III. Software &amp; Maintenance</div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q8: Does the interface support local languages?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, our HMI (Human-Machine Interface) supports multiple languages, including <strong>English, Vietnamese, Thai, and Indonesian</strong>, for easier local operation.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q9: How do you handle technical support in Southeast Asia?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        While we are expanding our local physical presence, we currently provide remote video diagnostics and comprehensive video training tutorials to help your team solve issues instantly and manage staff turnover.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q10: How fast can I change the product specifications (Mold Change)?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Our system is designed for speed. A complete changeover and calibration typically take <strong>under 30 minutes</strong>, while experienced operators can achieve it in as little as <strong>5–10 minutes</strong>.
+                    </div>
+                </div>
+
+                <!-- IV. Delivery & Efficiency -->
+                <div class="faq-group-title">IV. Delivery &amp; Efficiency</div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q11: What is the production yield and gelatin waste ratio?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Our machines achieve a <strong>98%+ qualification rate</strong> for standard products. Gelatin net waste is typically around 40%, depending on the specific die roll design.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q12: Can you provide validation documents for ASEAN-CTD?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we provide a full suite of <strong>IQ/OQ/PQ validation documents</strong> to assist with your regulatory filings and factory audits.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Q13: What is the typical lead time?
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                    <div class="faq-answer">
+                        We keep small machines <strong>in stock for immediate shipping</strong>. Medium-scale equipment typically takes <strong>15 days</strong>, while large-scale or custom lines are delivered within <strong>30–45 days</strong>.
+                    </div>
+                </div>
+
+            </div><!-- /.faq-group -->
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -732,6 +995,22 @@
                 });
             });
         });
+
+        // FAQ accordion
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                btn.classList.add('open');
+                answer.classList.add('open');
+            }
+        }
     </script>
 </body>
 </html>
